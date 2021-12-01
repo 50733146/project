@@ -21,7 +21,8 @@
 <li><span style="background-color: #ffff99;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
 <li><span style="background-color: #ffff99;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</li>
 <li><span style="background-color: #ffff99;">acp.bat</span> - 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
-</ol><h1>可攜系統</h1>
+</ol>
+<h1>可攜系統</h1>
 <p><a href="https://drive.google.com/file/d/1hTvN4mCk2b_enIK204HA0AVPsd3GPlh5/view?usp=sharing">portablekmol_base.7z</a> (下載 118MB, 解開壓縮後 148MB)</p>
 <p style="padding-left: 30px;">包括 data 目錄與 start_ipv6.bat, start_ipv4.bat, stop.bat</p>
 <p style="padding-left: 30px;">功能: 啟動後可以啟動 SciTE 編輯器, 可用於類解譯 ANSI C 程式, 以及 <a href="https://solvespace.com">Solvespace</a>.</p>
@@ -60,7 +61,8 @@ pacman -Sy mingw-w64-x86-64-cmake</pre>
 <p><a href="https://drive.google.com/file/d/1ITHNrhemifHloS_x3BAchyQxMUKma0AI/view?usp=sharing">webots-R2021a.7z</a> (下載 1.5GB, 解開壓所後 2.9GB)</p>
 <p style="padding-left: 30px;">功能: 採 Apache 2.0 使用授權的開放源套件, 可用於機電資控制系統設計與模擬.</p>
 <p><a href="https://drive.google.com/file/d/1iJigBy2F_nKuq6u2RW5wYXf-pRqDAJLZ/view?usp=sharing">xsltproc.7z</a> - get from <a href="https://github.com/CoppeliaRobotics/xsltproc-win">https://github.com/CoppeliaRobotics/xsltproc-win</a> </p>
-<p><a href="https://drive.google.com/file/d/1hRAsUWiR5UzWUVqRb8P829UUTQXVbLgd/view?usp=sharing">GitExtensions_3.5.1.7z</a> from <a href="https://github.com/gitextensions/gitextensions">https://github.com/gitextensions/gitextensions</a></p><h1>CMSiMDE</h1>
+<p><a href="https://drive.google.com/file/d/1hRAsUWiR5UzWUVqRb8P829UUTQXVbLgd/view?usp=sharing">GitExtensions_3.5.1.7z</a> from <a href="https://github.com/gitextensions/gitextensions">https://github.com/gitextensions/gitextensions</a></p>
+<h1>CMSiMDE</h1>
 <p>注意: 由於 CMSiMDE 近端啟動時之 ssl_context 改用 adhoc, 因此 Python 必須額外安裝 pyopenssl:</p>
 <p style="padding-left: 30px;">pip install pyopenssl</p>
 <p style="padding-left: 30px;">若是在 Linux 則使用 sudo pip3 install pyopenssl</p>
@@ -69,7 +71,8 @@ pacman -Sy mingw-w64-x86-64-cmake</pre>
 <p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo pyopenssl 等模組.</p>
 <p>亦即在 Windows 環境中, 以命令列執行:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl</pre>
-<p>其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p><h2>建立網頁</h2>
+<p>其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
+<h2>建立網頁</h2>
 <p>由於 CMSiMDE 帶有動態網頁與靜態網頁等兩個部分, 動態網頁執行時需要該伺服器可執行 Python 3, 以及 flask flask_cors bs4 lxml pelican markdown pyopenssl 等模組. 而靜態網頁的伺服則只需要 WWW Server 即可.</p>
 <p>若使用者在 Github 使用 CMSiMDE 建立網頁, 可以透過 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> template 建立, 步驟與兩種設定方式如下:</p>
 <ol>
@@ -77,7 +80,8 @@ pacman -Sy mingw-w64-x86-64-cmake</pre>
 <li>將瀏覽器連線至 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 頁面後, 點擊 Use this template 按鈕後, 選擇所要採用的 repository 名稱後, 就可以建立以 CMSiMDE 作為子模組的 Github 倉儲.</li>
 <li>假如使用者所選擇的倉儲名稱為: 帳號.github.io, 則 Github 會自動設定該倉儲的 main 分支為 Github Pages 根目錄, 意即一旦 Github Pages 完成轉檔 (提交訊息之後會出現綠勾), 則該倉儲的對應網頁將為: https://github_帳號.github.io</li>
 <li>若使用利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的倉儲名稱並非 github_帳號.github.io, 則使用者必須自行至該倉儲的 settings/Github Pages 選項中將 main branch 設為 Github Pages 對應的 root 目錄. 之後, Github 將會採用: github_帳號.github.io/倉儲名稱 作為與該倉儲對應的 Github Pages 網址.</li>
-</ol><h2>基本操作</h2>
+</ol>
+<h2>基本操作</h2>
 <p>當使用者利用 cms.bat 啟用動態網站後, 即可利用瀏覽器 <a>https://localhost:9443</a> (系統啟動之 IP 與埠號可以在 init.py 中設定), 在近端維護網站內容, 由於此時動態網站僅在 localhost 啟動, 因此可以使用內建的管理者密碼 "admin" 登入管理網站內容, 若是使用外部 IP 啟動, 則必須自行修改管理者密碼.</p>
 <p>在 Windows 操作系統, cms.bat 內容為:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">python cmsimde/wsgi.py</pre>
@@ -97,24 +101,29 @@ git commit -m "$1"
 git push</pre>
 <p>在 Windows 執行 batch 檔案, 可以直接在命令列視窗執行 cms 或 acp "提交訊息", 但是在 Mac 與 Linux 執行 Bash 檔案, 必須使用 ./cms 或 ./acp "提交訊息".</p>
 <p>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 <span style="background-color: #ffff99;">config</span> 指令修改管理者密碼.</p>
-<p>動態網站編輯表單中的 <span style="background-color: #ffff99;">config</span> 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p><h3>客製化</h3>
+<p>動態網站編輯表單中的 <span style="background-color: #ffff99;">config</span> 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p>
+<h3>客製化</h3>
 <p>假如利用 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 作為 template 所建立的 Github Pages 網站, 倉儲根目錄中的 cms.bat 可以在執行動態網站系統之後, 利用 pipe 讓 cms.bat 同時開啟 Firefox <a>https://localhost:9443</a></p>
 <p>修改後的 cms.bat 如下:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">python cmsimde/wsgi.py 1&gt; nul | "C:\Program Files (x86)\Mozilla Firefox\firefox" https://localhost:9443</pre>
-<p>前面 python cmsimde/wsgi.py 加上 1&gt; nul 的目的是因為 pipe 執行時會將前面指令執行結果轉為隨後執行指令的輸入, 而 1&gt; nul 則會將標準輸出的任何資料移除, 任何輸出不會影響 Firefox 執行.</p><h3>編輯網頁內容</h3>
+<p>前面 python cmsimde/wsgi.py 加上 1&gt; nul 的目的是因為 pipe 執行時會將前面指令執行結果轉為隨後執行指令的輸入, 而 1&gt; nul 則會將標準輸出的任何資料移除, 任何輸出不會影響 Firefox 執行.</p>
+<h3>編輯網頁內容</h3>
 <p>編輯 CMSiMDE 動態網站中的內容, 可以透過表單中的 <span style="background-color: #ffff99;">Edit All</span> 或 <span style="background-color: #ffff99;">Edit</span> 按鈕進行. <span style="background-color: #ffff99;">Edit</span> 可用於單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的 <span style="background-color: #ffff99;">Edit</span> 按鈕即可進入該頁面的編輯模式.</p>
 <p><span style="background-color: #ffff99;">Edit All</span> 通常用於單次刪除所有頁面內容或者只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中.</p>
 <p>目前採 AJAX 對編輯器存擋, 因此當使用者按下 Save 時, 系統會簡短出現 <span style="background-color: #00ff00;">saved!</span> 畫面, 表示所編輯的內容已經存入 config/content.htm</p>
 <p>當使用者在頁面中新增 H1, H2, 或 H3 標題內容時, 由於系統必須根據這些標題進行分頁, 因此使用者按下 Save 後, 系統畫面將會 reload, 並且回到系統的根目錄.</p>
 <p>若使用者採用 Edit All 同時編輯所有畫面, 按下 Save 後, 系統也會 reload 並回到系統根目錄.</p>
-<p>另外, 當使用者在頁面中刪除 H1, H2 或 H3 標題時, 系統也會在存擋後 reload 至系統根目錄.</p><h3>上傳與引用檔案</h3>
+<p>另外, 當使用者在頁面中刪除 H1, H2 或 H3 標題時, 系統也會在存擋後 reload 至系統根目錄.</p>
+<h3>上傳與引用檔案</h3>
 <p><span style="background-color: #000000; color: #ffffff;">File Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p>引用使用者上傳的檔案</p>
-<p style="padding-left: 30px;"><a href="/downloads/PythonNotesForProfessionals.pdf">PythonNotesForProfessionals.pdf</a></p><h3>上傳與引用圖片</h3>
+<p style="padding-left: 30px;"><a href="/downloads/PythonNotesForProfessionals.pdf">PythonNotesForProfessionals.pdf</a></p>
+<h3>上傳與引用圖片</h3>
 <p><span style="background-color: #000000; color: #ffffff;">Image Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p>引用使用者上傳的檔案</p>
 <p style="padding-left: 30px;"><img caption="false" class="add_border" height="227" src="/images/nfu_logo_mde.png" width="200"/></p>
-<p style="padding-left: 30px;"></p><h3>嵌入程式碼</h3>
+<p style="padding-left: 30px;"></p>
+<h3>嵌入程式碼</h3>
 <p>利用 Insert/Edit code 功能, 可以嵌入各種程式碼:</p>
 <pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 下列 Dart 程式, 利用 Runge Kutta 迭代運算法, 解常微分方程式
 // 設 t 為時間, x 則設為物體的位移
@@ -164,7 +173,8 @@ main() {
   print('The value of x at t=$t is: ${rungeKutta(t0, x, t, h)}');
 }
 </pre>
-<p></p><h3>嵌入影片檔</h3>
+<p></p>
+<h3>嵌入影片檔</h3>
 <p>直接利用 Source code 功能, 將影片檔案的 iframe 標註放入後存檔:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/bZupkkT4T5c" width="560"></iframe></p>
 <h3>檢視 STL</h3>
@@ -179,12 +189,14 @@ main() {
 <p>使用 iframe 其 src 指向 STL 檔案的絕對 URL 路徑:</p>
 <p>/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl</p>
 <p>就可以如下檢視 downloads/spikeball.stl</p>
-<p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p><h2>置入 disqus</h2>
+<p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p>
+<h2>置入 disqus</h2>
 <p>利用 Gmail 信箱可以至 <a href="https://blog.disqus.com/">https://blog.disqus.com/</a> 登記一個免費的 Basic 帳號, 取得對應的 Javascript 程式碼 (其實是 html 內容, 包含導入 disqus Javascript 程式庫的資料內容) 之後, 使用者就可以在特定的 CMSiMDE 頁面置入 disqus 討論與回應系統.</p>
 <h4>使用範例:</h4>
-<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/index.html">https://mde.tw/eng/content/index.html</a> </p>
-<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Python.html">https://mde.tw/eng/content/Python.html</a> </p>
-<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Memo.html">https://mde.tw/eng/content/Memo.html</a> </p><h2>Gitlab 同步</h2>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/index.html">https://mde.tw/eng/content/index.html</a></p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Python.html">https://mde.tw/eng/content/Python.html</a></p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/eng/content/Memo.html">https://mde.tw/eng/content/Memo.html</a></p>
+<h2>Gitlab 同步</h2>
 <p>利用 git remote add gitlab <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 可以在近端倉儲中的 .git/config 中新增一個名稱為 gitlab, 且與 <a href="https://gitlab.com/user/repository.git">https://gitlab.com/user/repository.git</a> 倉儲對應的設定. 使用者可以將此倉儲改版內容以 git push gitlab 推向 Gitlab.</p>
 <p>至於 Gitlab Pages 額外需要下列 .yml 檔案進行轉換設定:</p>
 <p>.gitlab-ci.yml</p>
@@ -201,8 +213,10 @@ main() {
   - master
 variables:
   GIT_SUBMODULE_STRATEGY: recursive</pre>
-<p></p><h2>Heroku 部署</h2>
-<p>與 Heroku 部署有關資訊請參考: <a href="https://mde.tw/cp2020/content/Heroku.html">https://mde.tw/cp2020/content/Heroku.html</a></p><h2>Fossil SCM</h2>
+<p></p>
+<h2>Heroku 部署</h2>
+<p>與 Heroku 部署有關資訊請參考: <a href="https://mde.tw/cp2020/content/Heroku.html">https://mde.tw/cp2020/content/Heroku.html</a></p>
+<h2>Fossil SCM</h2>
 <p>在 Github 之外, 可以同步將各倉儲資料存放至 Gitlab, Heroku (有 500 MB 容量限制) 與 Fossil SCM.</p>
 <p>希望整合 Github 與 Fossil SCM 倉儲步驟說明如下:</p>
 <p>針對 Github 中已經有 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 倉儲, 希望同步建 <a href="https://fossil.kmol.info/cmstemplate">https://fossil.kmol.info/cmstemplate</a> 與之內容同步.</p>
@@ -213,230 +227,4 @@ variables:
 <p></p>
 <h4>參考資料:</h4>
 <p>編譯 Fossil SCM:</p>
-<p style="padding-left: 30px;"> <a href="http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html">http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html</a></p><h2>標題選擇</h2>
-<p>由於 CMSiMDE 中的動態網站透過 config/content.htm 的 H1~H3 超文件標註進行分頁, 因此使用者利用 cms.bat 開啟動態網站後, 必須注意各頁面標題文字的選擇:</p>
-<ol>
-<li><span style="background-color: #ffff99;">頁面標題文字儘量簡短</span> - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>
-<li><span style="background-color: #ffff99;">頁面標題文字不要使用標點符號</span> - 因為標點符號中的 "/" 會造成頁面擷取時 URL 指令分段上的誤判, 至於標題文字中若有 ":" 則會在動態內容轉靜態內容時, 因 Windows 不允許檔案名稱帶有 ":" 而無法轉檔.</li>
-<li><span style="background-color: #ffff99;">頁面標題中不可以有超文件標註</span> - 由於 CMSiMDE 動態網站編輯器採用 GUI 進行, 採用滑鼠標修頁面標題時, 可能無意中將 HTML 標註放入 H1~H3 標題文字中, 如此可能會造成 CMSiMDE 分頁錯誤而無法開啟動態網站. 當使用者要檢查所使用的頁面標題是否帶有 html 標註, 可以透過編輯功能中的 Source Code 檢查.</li>
-<li><span style="background-color: #ffff99;">H1 標題數量不可過多</span> - 由於 CMSiMDE 的靜態網站支援手機模式, 當頁面 H1 標題數量超過 10 個之後, 頁面標題可能無法在螢幕上最上方以一列顯示, 而是必須出現在第二行, 結果將會導致頁面展開時的 Javascript 程式產生錯亂, 結果為無法直接以滑鼠點擊進入特定頁面.</li>
-</ol>
-<p></p>
-<p></p>
-<h2>靜態網頁 404</h2>
-<p>當使用者將近端網頁倉儲資料推向 Github 後, commit 提交訊息之後若沒有出現綠勾, 表示靜態網頁無法轉檔成功, 這時連接靜態網頁時, 將會出現 404, 通常情況下是因為倉儲中 cmsimde 子模組的版次無法與遠端 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 中的版本對應, 而造成此問題的原因, 通常是因為使用者直接在倉儲的 cmsimde 子模組目錄中進行不當的 git add 與 commit, 因為使用者並沒有對子模組改版的權限, 一旦對 cmsimde 子模組 git add 與 commit 之後, git 就會將 cmsimde 的 HEAD 對應到一個新的 cmsimde 版次號, 但此版次號並不是 cmsimde 子模組 official 的版次, 因此若在此時失去對 cmsimde 子模組的正確對應下, 回到倉儲根目錄完成新增提交與推送, Github 將會因為無法找到正確對應的 cmsimde 版次而無法完成靜態網頁的轉檔.</p>
-<p>上述靜態網頁出現 404 錯誤訊息的處理方式如下:</p>
-<ol>
-<li>從 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 倉儲中複製最新版本的版次號, 以 <a href="https://github.com/mdecourse/cmsimde/commit/1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af">2021/03/03 的版次</a>為例, 版次號為 1c3aeec1f5d26b421743d2f5ef8bb7d5b99292af, 使用者只需要最前面的 7 個字元, 也就是 1c3aeec.</li>
-<li>然後在近端倉儲中, 以命令列進入 cmsimde 目錄後執行: <span style="background-color: #ffff99;">git checkout 1c3aeec.<br/></span></li>
-<li>接下來在 cmsimde 目錄中, 執行 git checkout master, 這時正確版次的 cmsimde 內容將會合併到 master 分支.</li>
-<li>接著退回倉儲目錄, 以 git add, git commit 及 git push 將倉儲改版內容推向 Github 後應該就可以將倉儲正確轉為靜態網站內容.</li>
-</ol><h2>動態網站錯誤</h2>
-<p>CMSiMDE 動態網站經常出現的錯誤是無法對 config/content.htm 分頁, 這時可以利用 SCiTE 編輯 content.htm, 找尋是否 H1~H3 標註中是否帶有特殊符號, 如 "/" 或 ":" 等.</p>
-<h2>已知問題</h2>
-<p>cmsimde 是一套始終修改中的機械設計工程導向網際內容管理系統, 由於自 2013 年底開發至今, Python 已經從 3.6 進展到 3.9, 網際發展方向也從 html editor 趨向 markdown editor, WebGL 相關技術與 three.js 的整合也越發成熟.</p>
-<p>因此面對</p>
-<p><a href="https://github.com/mdecourse/virtualkossel">https://github.com/mdecourse/virtualkossel</a></p>
-<p style="padding-left: 30px;"><a href="http://mde.tw/virtualkossel/">http://mde.tw/virtualkossel/</a></p>
-<p>cmsimde 應該要導入更多動態零組件展示與互動相關的機械設計功能.</p>
-<p>可以著力的方向:</p>
-<p style="padding-left: 30px;"><a href="http://help.autodesk.com/view/fusion360/ENU/?guid=GUID-1C665B4D-7BF7-4FDF-98B0-AA7EE12B5AC2">Fusion 360 </a></p>
-<p style="padding-left: 60px;"><a href="https://github.com/AutodeskFusion360">https://github.com/AutodeskFusion360</a></p>
-<p style="padding-left: 30px;"><a href="https://stromberg.dnsalias.org/~strombrg/pybrowser/python-browser.html">https://stromberg.dnsalias.org/~strombrg/pybrowser/python-browser.html</a></p>
-<p style="padding-left: 30px;"><a href="https://vpython.org/">https://vpython.org/</a></p>
-<p style="padding-left: 30px;"><a href="https://www.glowscript.org/">https://www.glowscript.org/</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/slembcke/Chipmunk2D">https://github.com/slembcke/Chipmunk2D</a></p>
-<p style="padding-left: 60px;"><a href="http://www.pymunk.org/en/latest/">http://www.pymunk.org/en/latest/</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/mrjleo/python-physics-demos">https://github.com/mrjleo/python-physics-demos</a></p>
-<p style="padding-left: 30px;">cango3d library: <a href="https://www.arc.id.au/Canvas3DGraphics.html">https://www.arc.id.au/Canvas3DGraphics.html</a></p><h3>IPv6</h3>
-<p>參考: <a href="https://github.com/tinymce/tinymce/issues/4409">https://github.com/tinymce/tinymce/issues/4409</a> 中的 <a href="https://github.com/tinymce/tinymce/issues/4409#issuecomment-680282550">url parsing 修改</a>後, 目前已經可以在 local 與 IPv6 網路連線中啟用 tinymce4 editor.</p><h3>上傳資料引用</h3>
-<p>針對有特殊符號的上傳檔案名稱, 例如: Non-Programmer's_Tutorial_for_Python_3.pdf, 目前的 insert/edit link 編輯無法正確將此帶有 "'" 的檔案引入 anchor 標註.</p>
-<p>上傳檔案區的 keyword 查詢目前無法使用, 且上傳檔案的排序在不同操作系統中會產生不同順序排列.</p>
-<h3>MathJax</h3>
-<p>MathJax 引用問題:</p>
-<p style="padding-left: 30px;"><a href="https://www.mathjax.org/">https://www.mathjax.org/</a></p><h3>html 分頁</h3>
-<p>分頁失敗時會意外抹除 config\content.htm 中的所有內容</p>
-<p>分頁失敗並不會提供 debug 建議</p>
-<h3>靜態搜尋</h3>
-<p>已知在帶有 Brython document.query[] 程式頁面架構下, 無法使用靜態網頁關鍵字搜尋.</p><h3>template</h3>
-<p>cmsimde 針對利用 Flask 產生頁面並未使用 Template, 為了讓程式更加模組化可以考慮納入 <a href="https://www.makotemplates.org/">Mako</a> template engine.</p>
-<h3>重複標題頁面</h3>
-<p>已知重複標題頁面編輯時, 只能儲存前頁面的內容, 後續重複標題頁面無法在單頁模式編輯下更改標題與內容. 目前只能透過 Edit All 修改.</p><h2>ajax</h2>
-<p>共計有四個地方必須修改: <a href="https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html">https://mde.tw/lab/blog/2021-kmol-cmsimde-ajax-editor-save.html</a></p>
-<p>第一就是 sh4tinymce 長久以來的 bug. 可以透過 tinymce.activeEditor.setDirty(true); 知會 editor, 在 onSubmitFunction 將 highlighter 引用的程式碼插入 editor 時, 讓表單中的 Save 可以點擊.</p>
-<p>另外兩項更動, 則是將 savePage 與 ssavePage 中移除跳行的程式碼, 予以註解.</p>
-<p>最後一項修改則是 tinymce_editor() 函式:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def tinymce_editor(menu_input=None, editor_content=None, page_order=None):
-    
-    """Tinymce editor scripts
-    """
-    
-    sitecontent =file_get_contents(config_dir + "content.htm")
-    editor = set_admin_css() + editorhead() + '''&lt;/head&gt;''' + editorfoot()
-    # edit all pages
-    if page_order is None:
-        outstring = editor + "&lt;div class='container'&gt;&lt;nav&gt;" + \
-                        menu_input + "&lt;/nav&gt;&lt;section&gt;&lt;form onsubmit='return save_all_data(this)'&gt; \
-                        &lt;textarea class='simply-editor' name='page_content' cols='50' rows='15'&gt;" +  \
-                        editor_content + "&lt;/textarea&gt;&lt;input type='button' onClick='save_all()' value='save'&gt;"
-        outstring +="""
-        &lt;script&gt;
-        // leave  warning when modification not saved
-        window.addEventListener('beforeunload', function(e) {
-        var myPageIsDirty = tinymce.activeEditor.isDirty()
-        if(myPageIsDirty) {
-            //following two lines will cause the browser to ask the user if they
-            //want to leave. The text of this dialog is controlled by the browser.
-            e.preventDefault(); //per the standard
-            e.returnValue = ''; //required for Chrome
-        }
-        //else: user is allowed to leave without a warning dialog
-        });
-        
-        function tempAlert(msg,duration)
-            {
-             var el = document.createElement("div");
-             el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:lightgreen;");
-             el.innerHTML = msg;
-             setTimeout(function(){
-              el.parentNode.removeChild(el);
-             },duration);
-             document.body.appendChild(el);
-            }
-        
-        function save_all(){
-            tinymce.activeEditor.execCommand('mceSave');
-        }
-        
-        function save_all_data(form) {
-                var page_content = $('textarea#page_content').val();
-                
-                $.ajax({
-                    type: "POST",
-                    url: "/savePage",
-                    data: {"page_content": page_content},
-                    error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        alert(XMLHttpRequest.status);
-                        alert(XMLHttpRequest.readyState);
-                        alert(textStatus);
-                    },
-                    success: function() {
-                        //document.getElementById("notice").innerHTML = "saved!";
-                        parser = new DOMParser();
-                        parsed = parser.parseFromString(page_content, 'text/html');
-                        paragraphs = parsed.querySelectorAll('h1, h2, h3');
-                        //alert(paragraphs.length)
-                        //tempAlert("saved!", 700);
-
-                        if (paragraphs.length &gt; 1 || paragraphs.length == 0)
-                        {
-                            // when no title page will cause reload to error page
-                            //window.location.reload();
-                            document.location.href="/";
-                        }
-                        else
-                        {
-                            tempAlert("saved!", 700);
-                        }
-                    }
-                 }); 
-        }
-        &lt;/script&gt;
-        """
-        outstring += "&lt;/form&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;"
-    else:
-        # add viewpage button while single page editing
-        head, level, page = parse_content()
-        outstring = "&lt;p id='notice'&gt;&lt;/p&gt;"
-        outstring  += editor + "&lt;div class='container'&gt;&lt;nav&gt;" + \
-                        menu_input+"&lt;/nav&gt;&lt;section&gt;&lt;form onsubmit='return save_data(this)'&gt; \
-                        &lt;textarea class='simply-editor' id='page_content' name='page_content' cols='50' rows='15'&gt;" + \
-                        editor_content + "&lt;/textarea&gt;&lt;input type='hidden'  id='page_order' name='page_order' value='" + \
-                        str(page_order) + "'&gt;"
-        # add an extra collaborative save button
-        outstring += """&lt;input type="button" onClick="ssave()"  value="save"&gt;"""
-        outstring += """&lt;input type="button" onClick="cssave()"  value="csave"&gt;"""
-
-        outstring +="""
-        &lt;script&gt;
-        // leave  warning when modification not saved
-        window.addEventListener('beforeunload', function(e) {
-        var myPageIsDirty = tinymce.activeEditor.isDirty()
-        if(myPageIsDirty) {
-            //following two lines will cause the browser to ask the user if they
-            //want to leave. The text of this dialog is controlled by the browser.
-            e.preventDefault(); //per the standard
-            e.returnValue = ''; //required for Chrome
-        }
-        //else: user is allowed to leave without a warning dialog
-        });
-        
-        function tempAlert(msg,duration)
-            {
-             var el = document.createElement("div");
-             el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:lightgreen;");
-             el.innerHTML = msg;
-             setTimeout(function(){
-              el.parentNode.removeChild(el);
-             },duration);
-             document.body.appendChild(el);
-            }
-            
-        // default action is "save"
-        var action ="save";
-        
-        function cssave(){
-            action = "csave";
-            tinymce.activeEditor.execCommand('mceSave');
-        }
-        
-        function ssave(){
-            action = "save";
-            tinymce.activeEditor.execCommand('mceSave');
-        }
-        
-        function save_data(form) {
-                var page_content = $('textarea#page_content').val();
-                var page_order = $('#page_order').val();
-                
-                $.ajax({
-                    type: "POST",
-                    url: "/ssavePage",
-                    data: {"page_content": page_content, "page_order": page_order, "action": action},
-                    error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        alert(XMLHttpRequest.status);
-                        alert(XMLHttpRequest.readyState);
-                        alert(textStatus);
-                    },
-                    success: function() {
-                        //document.getElementById("notice").innerHTML = "saved!";
-                        parser = new DOMParser();
-                        parsed = parser.parseFromString(page_content, 'text/html');
-                        paragraphs = parsed.querySelectorAll('h1, h2, h3');
-                        //alert(paragraphs.length)
-                        //tempAlert("saved!", 700);
-
-                        if (paragraphs.length &gt; 1 || paragraphs.length == 0 )
-                        {
-                            //window.location.reload();
-                            document.location.href="/";
-                        }
-                        else
-                        {
-                            tempAlert("saved!", 700);
-                        }
-                    }
-                 }); 
-        }
-        &lt;/script&gt;
-        """
-        outstring += '''&lt;input type=button onClick="location.href='/get_page/''' + \
-                    head[page_order] + \
-                    ''''" value='viewpage'&gt;&lt;/form&gt;&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;'''
-    return outstring
-    
-</pre>
-<p></p><h2>black</h2>
-<p>準備 black 一下 cmsimde 原始碼: <a href="https://github.com/psf/black">https://github.com/psf/black</a></p><h2>summernote</h2>
-<p><a href="https://github.com/summernote/summernote">https://github.com/summernote/summernote</a></p>
-<p></p>
+<p style="padding-left: 30px;"> <a href="http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html">http://project.mde.tw/blog/zai-msys2-huan-jing-bian-yi-fossil-scm.html</a></p>
